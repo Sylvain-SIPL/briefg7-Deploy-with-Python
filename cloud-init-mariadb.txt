@@ -1,0 +1,17 @@
+#cloud-config
+package_upgrade: true
+packages:
+  - mariadb-server
+runcmd:
+  - systemctl enable mariadb
+  - systemctl start mariadb
+  - mysql_secure_installation <<EOF
+
+y
+Admin_Azure
+Admin_Azure
+y
+y
+y
+y
+EOF

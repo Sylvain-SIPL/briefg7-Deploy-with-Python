@@ -1,0 +1,7 @@
+#cloud-config
+package_upgrade: true
+runcmd:
+- sudo apt update
+- sudo apt install -y php
+- systemctl enable php
+- systemctl start php
